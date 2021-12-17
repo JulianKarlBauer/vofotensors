@@ -3,7 +3,7 @@
 
 import numpy as np
 import sympy as sp
-from vofotensors.numbers import z, half
+from vofotensors.numbers import z, sqrt_two, two
 from vofotensors.abc import (
     alpha,
     alpha1,
@@ -97,9 +97,9 @@ def dev4_ortho_by_abc():
             [-(a + b), a, b, z, z, z],
             [a, -(a + c), c, z, z, z],
             [b, c, -(b + c), z, z, z],
-            [z, z, z, sp.S(2) * c, z, z],
-            [z, z, z, z, sp.S(2) * b, z],
-            [z, z, z, z, z, sp.S(2) * a],
+            [z, z, z, two * c, z, z],
+            [z, z, z, z, two * b, z],
+            [z, z, z, z, z, two * a],
         ],
         dtype=object,
     )
