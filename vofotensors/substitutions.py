@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import numpy as np
 import sympy as sp
-from vofotensors.numbers import z, half
+from vofotensors.numbers import z
 from vofotensors.abc import (
-    alpha,
     alpha1,
-    alpha2,
     alpha3,
     la1,
     la2,
-    la3,
-    rho,
-    rho1,
-    rho2,
-    rho3,
     d1,
     d2,
     d3,
@@ -24,7 +16,6 @@ from vofotensors.abc import (
     d6,
     d7,
     d8,
-    d9,
 )
 
 alpha1_in_la1 = sp.sympify("4/3") * la1 - sp.sympify("2/3")
