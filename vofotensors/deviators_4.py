@@ -173,7 +173,7 @@ def dev4_triclinic_by_d():
     )
 
 
-def dev4_planar_alpha_x_d_0_d_7():
+def dev4_planar_alpha1_d_0_d_7():
     return np.array(
         sp.Matrix(dev4_triclinic_by_d()).subs(substitutions["planar_alpha_d"])
     )
@@ -187,7 +187,7 @@ def dev4_planar_la_0_d_0_d_7():
 
 dev4s_parametric = {
     "planar": {
-        "alpha_x_d_0_d_7": dev4_planar_alpha_x_d_0_d_7(),
+        "alpha1_d_0_d_7": dev4_planar_alpha1_d_0_d_7(),
         "la_0_d_0_d_7": dev4_planar_la_0_d_0_d_7(),
     },
     "transv_isotropic": {
@@ -207,9 +207,9 @@ dev4s_parametric = {
 
 N4s_pairs = {
     "planar": {
-        "alpha_x_d_0_d_7": {
-            "D2": dev2_planar_by_alpha_x(),
-            "D4": dev4_planar_alpha_x_d_0_d_7(),
+        "alpha1_d_0_d_7": {
+            "D2": dev2_planar_by_alpha1(),
+            "D4": dev4_planar_alpha1_d_0_d_7(),
         },
         "la_0_d_0_d_7": {
             "D2": dev2_planar_by_la_0(),
@@ -217,27 +217,27 @@ N4s_pairs = {
         },
     },
     "transv_isotropic": {
-        "alpha_x_rho1": {"D2": dev2_by_alpha_x(), "D4": dev4_transv_x_by_rho1()},
-        "alpha_y_rho2": {"D2": dev2_by_alpha_y(), "D4": dev4_transv_y_by_rho2()},
-        "alpha_z_rho3": {"D2": dev2_by_alpha_z(), "D4": dev4_transv_z_by_rho3()},
+        "alpha1_rho1": {"D2": dev2_by_alpha1(), "D4": dev4_transv_x_by_rho1()},
+        "alpha2_rho2": {"D2": dev2_by_alpha2(), "D4": dev4_transv_y_by_rho2()},
+        "alpha3_rho3": {"D2": dev2_by_alpha3(), "D4": dev4_transv_z_by_rho3()},
     },
     "trigonal": {
-        "alpha_z_def_z": {"D2": dev2_by_alpha_z(), "D4": dev4_trigonal_by_def_z()},
+        "alpha3_def_z": {"D2": dev2_by_alpha3(), "D4": dev4_trigonal_by_def_z()},
     },
     "orthotropic": {
         "a2_b2_a_b_c": {"D2": dev2_by_a2_b2(), "D4": dev4_ortho_by_abc()},
-        "alpha_x_alpha_z_rho1_rho2_rho3": {
-            "D2": dev2_by_alpha_x_alpha_z(),
+        "alpha1_alpha3_rho1_rho2_rho3": {
+            "D2": dev2_by_alpha1_alpha3(),
             "D4": dev4_ortho_by_rho1_rho2_rho3(),
         },
-        "alpha_x_alpha_z_a_b_c": {
-            "D2": dev2_by_alpha_x_alpha_z(),
+        "alpha1_alpha3_a_b_c": {
+            "D2": dev2_by_alpha1_alpha3(),
             "D4": dev4_ortho_by_abc(),
         },
     },
     "monoclinic": {
-        "alpha_x_alpha_z_a_b_c_m_n": {
-            "D2": dev2_by_alpha_x_alpha_z(),
+        "alpha1_alpha3_a_b_c_m_n": {
+            "D2": dev2_by_alpha1_alpha3(),
             "D4": dev4_monoclinic_by_abcmn_z(),
         },
     },
