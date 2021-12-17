@@ -86,9 +86,7 @@ def dev4_transv_z_by_rho3():
 
 
 def dev4_ortho_by_rho1_rho2_rho3():
-    return (
-        dev4_transv_x_by_rho1() + dev4_transv_y_by_rho2() + dev4_transv_z_by_rho3()
-    )
+    return dev4_transv_x_by_rho1() + dev4_transv_y_by_rho2() + dev4_transv_z_by_rho3()
 
 
 def dev4_ortho_by_abc():
@@ -155,18 +153,18 @@ def copy_upper_triangle(matrix):
 
 
 def dev4_triclinic_by_d():
-    comp_03 = -sqrt_two * (d3 + d4)
-    comp_14 = -sqrt_two * (d5 + d6)
-    comp_25 = -sqrt_two * (d7 + d8)
+    comp_03 = -sqrt_two * (d4 + d5)
+    comp_14 = -sqrt_two * (d6 + d7)
+    comp_25 = -sqrt_two * (d8 + d9)
     return copy_upper_triangle(
         np.array(
             [
-                [-(d0 + d1), d0, d1, comp_03, sqrt_two * d5, sqrt_two * d7],
-                [z, -(d0 + d2), d2, sqrt_two * d3, comp_14, sqrt_two * d8],
-                [z, z, -(d1 + d2), sqrt_two * d4, sqrt_two * d6, comp_25],
-                [z, z, z, sp.S(2) * d2, sqrt_two * comp_25, sqrt_two * comp_14],
-                [z, z, z, z, sp.S(2) * d1, sqrt_two * comp_03],
-                [z, z, z, z, z, sp.S(2) * d0],
+                [-(d1 + d2), d1, d2, comp_03, sqrt_two * d6, sqrt_two * d8],
+                [z, -(d1 + d3), d3, sqrt_two * d4, comp_14, sqrt_two * d9],
+                [z, z, -(d2 + d3), sqrt_two * d5, sqrt_two * d7, comp_25],
+                [z, z, z, sp.S(2) * d3, sqrt_two * comp_25, sqrt_two * comp_14],
+                [z, z, z, z, sp.S(2) * d2, sqrt_two * comp_03],
+                [z, z, z, z, z, sp.S(2) * d1],
             ],
             dtype=object,
         )
