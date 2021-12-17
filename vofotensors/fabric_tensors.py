@@ -118,32 +118,6 @@ def dev2_transv_by_la1():
     return N2 - N2_iso()
 
 
-def dev2_transv_x_by_la2():
-    reminder = sp.S(1) - sp.S(2) * la2
-    N2 = np.array(
-        [
-            [reminder, z, z],
-            [z, la2, z],
-            [z, z, la2],
-        ],
-        dtype=object,
-    )
-    return N2 - N2_iso()
-
-
-def dev2_transv_z_by_la2():
-    reminder = sp.S(1) - sp.S(2) * la2
-    N2 = np.array(
-        [
-            [la2, z, z],
-            [z, la2, z],
-            [z, z, reminder],
-        ],
-        dtype=object,
-    )
-    return N2 - N2_iso()
-
-
 def dev2_by_alpha1():
     return alpha1 * F2_transv_1()
 
@@ -208,8 +182,6 @@ dev2s_parametric = {
         "alpha2": dev2_by_alpha2(),
         "alpha3": dev2_by_alpha3(),
         "la1": dev2_transv_by_la1(),
-        "la2_x": dev2_transv_x_by_la2(),
-        "la2_z": dev2_transv_z_by_la2(),
     },
     "orthotropic": {
         "la1_la2": dev2_by_la1_la2(),
