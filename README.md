@@ -40,6 +40,12 @@ and cite the [paper given above][url_mms_article] and the latest [Zenodo-DOI][la
 
 Note: [Develop vs. install](https://stackoverflow.com/a/19048754/8935243)
 
+## Example
+
+Print available parameterizations to your Python prompt by executing these scripts:
+- [`vofotensors/scripts/s001_print_available_N2.py`](vofotensors/scripts/s001_print_available_N2.py)
+- [`vofotensors/scripts/s002_print_available_N4.py`](vofotensors/scripts/s002_print_available_N4.py)
+
 ## Acknowledgment
 
 The research documented in this repository has been funded by the German Research Foundation (DFG) within the
