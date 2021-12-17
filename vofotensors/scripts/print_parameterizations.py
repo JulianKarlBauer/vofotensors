@@ -21,3 +21,6 @@ def print_nested(dictionary):
 
 print("Available parameterizations of second order fiber orientation tensors:\n")
 print_nested(vot.fabric_tensors.N2s_parametric)
+
+print("Available parameterizations of fourth order fiber orientation tensors:\n")
+print_nested(vot.fabric_tensors.N4s_parametric)
