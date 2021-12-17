@@ -72,7 +72,7 @@ substitutions = {
 # N2
 
 
-def A2_iso():
+def N2_iso():
     return sp.S(1) / sp.S(3) * sb.to_numpy(sb.get_I2())
 
 
@@ -110,7 +110,7 @@ def F2_transv_3():
 
 
 def dev2_to_N2(dev2):
-    return A2_iso() + dev2
+    return N2_iso() + dev2
 
 
 def dev2_transv_by_la1():
@@ -123,7 +123,7 @@ def dev2_transv_by_la1():
         ],
         dtype=object,
     )
-    return N2 - A2_iso()
+    return N2 - N2_iso()
 
 
 def dev2_transv_x_by_la2():
@@ -136,7 +136,7 @@ def dev2_transv_x_by_la2():
         ],
         dtype=object,
     )
-    return N2 - A2_iso()
+    return N2 - N2_iso()
 
 
 def dev2_transv_z_by_la2():
@@ -149,7 +149,7 @@ def dev2_transv_z_by_la2():
         ],
         dtype=object,
     )
-    return N2 - A2_iso()
+    return N2 - N2_iso()
 
 
 def dev2_by_alpha1():
@@ -203,7 +203,7 @@ def dev2_by_la1_la2():
         ],
         dtype=object,
     )
-    return N2 - A2_iso()
+    return N2 - N2_iso()
 
 
 def dev2_by_la1_la2_la3():
@@ -215,7 +215,7 @@ def dev2_by_la1_la2_la3():
         ],
         dtype=object,
     )
-    return N2 - A2_iso()
+    return N2 - N2_iso()
 
 
 def dev2_planar_by_alpha1():
