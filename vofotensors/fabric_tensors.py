@@ -42,7 +42,7 @@ def map_nested(dictionary, transformation):
 ################################################
 # Parametrizations
 
-alpha_x_in_la0 = sp.sympify("4/3") * la0 - sp.sympify("2/3")
+alpha_x_in_la1 = sp.sympify("4/3") * la1 - sp.sympify("2/3")
 
 substitutions = {
     "planar_alpha_d": {
@@ -55,10 +55,10 @@ substitutions = {
         d6: z,
         d8: -d7,
     },
-    "planar_la0_d": {
-        la1: 1 - la0,
-        d1: sp.sympify("1/140") * (-sp.S(15) * alpha_x_in_la0 - sp.S(6)),
-        d2: sp.sympify("1/140") * (sp.S(15) * alpha_x_in_la0 - sp.S(6)),
+    "planar_la1_d": {
+        la2: 1 - la1,
+        d1: sp.sympify("1/140") * (-sp.S(15) * alpha_x_in_la1 - sp.S(6)),
+        d2: sp.sympify("1/140") * (sp.S(15) * alpha_x_in_la1 - sp.S(6)),
         d3: z,
         d4: z,
         d5: z,
@@ -113,11 +113,11 @@ def dev2_to_N2(dev2):
     return A2_iso() + dev2
 
 
-def dev2_transv_by_la0():
-    half_reminder = (sp.S(1) - la0) / sp.S(2)
+def dev2_transv_by_la1():
+    half_reminder = (sp.S(1) - la1) / sp.S(2)
     N2 = np.array(
         [
-            [la0, z, z],
+            [la1, z, z],
             [z, half_reminder, z],
             [z, z, half_reminder],
         ],
@@ -126,25 +126,25 @@ def dev2_transv_by_la0():
     return N2 - A2_iso()
 
 
-def dev2_transv_x_by_la1():
-    reminder = sp.S(1) - sp.S(2) * la1
+def dev2_transv_x_by_la2():
+    reminder = sp.S(1) - sp.S(2) * la2
     N2 = np.array(
         [
             [reminder, z, z],
-            [z, la1, z],
-            [z, z, la1],
+            [z, la2, z],
+            [z, z, la2],
         ],
         dtype=object,
     )
     return N2 - A2_iso()
 
 
-def dev2_transv_z_by_la1():
-    reminder = sp.S(1) - sp.S(2) * la1
+def dev2_transv_z_by_la2():
+    reminder = sp.S(1) - sp.S(2) * la2
     N2 = np.array(
         [
-            [la1, z, z],
-            [z, la1, z],
+            [la2, z, z],
+            [z, la2, z],
             [z, z, reminder],
         ],
         dtype=object,
@@ -194,24 +194,24 @@ def dev2_by_alpha_x_alpha_y_alpha_z():
     return dev2_by_alpha_x_alpha_z() + alpha_y * A2_transv_y()
 
 
-def dev2_by_la0_la1():
+def dev2_by_la1_la2():
     N2 = np.array(
         [
-            [la0, z, z],
-            [z, la1, z],
-            [z, z, sp.S(1) - la0 - la1],
+            [la1, z, z],
+            [z, la2, z],
+            [z, z, sp.S(1) - la1 - la2],
         ],
         dtype=object,
     )
     return N2 - A2_iso()
 
 
-def dev2_by_la0_la1_la2():
+def dev2_by_la1_la2_la3():
     N2 = np.array(
         [
-            [la0, z, z],
-            [z, la1, z],
-            [z, z, la2],
+            [la1, z, z],
+            [z, la2, z],
+            [z, z, la3],
         ],
         dtype=object,
     )
@@ -225,7 +225,7 @@ def dev2_planar_by_alpha_x():
 
 
 def dev2_planar_by_la_0():
-    return np.array(sp.Matrix(dev2_by_la0_la1()).subs(substitutions["planar_la0_d"]))
+    return np.array(sp.Matrix(dev2_by_la1_la2()).subs(substitutions["planar_la1_d"]))
 
 
 dev2s_parametric = {
@@ -237,13 +237,13 @@ dev2s_parametric = {
         "alpha_x": dev2_by_alpha_x(),
         "alpha_y": dev2_by_alpha_y(),
         "alpha_z": dev2_by_alpha_z(),
-        "la0": dev2_transv_by_la0(),
-        "la1_x": dev2_transv_x_by_la1(),
-        "la1_z": dev2_transv_z_by_la1(),
+        "la1": dev2_transv_by_la1(),
+        "la2_x": dev2_transv_x_by_la2(),
+        "la2_z": dev2_transv_z_by_la2(),
     },
     "orthotropic": {
-        "la0_la1": dev2_by_la0_la1(),
-        "la0_la1_la2": dev2_by_la0_la1_la2(),
+        "la1_la2": dev2_by_la1_la2(),
+        "la1_la2_la3": dev2_by_la1_la2_la3(),
         "a2_b2": dev2_by_a2_b2(),
         "a2_c2": dev2_by_a2_c2(),
         "alpha_x_alpha_z": dev2_by_alpha_x_alpha_z(),
