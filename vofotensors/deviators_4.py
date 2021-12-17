@@ -31,7 +31,7 @@ from vofotensors.abc import (
 # N4
 
 
-def A4_transv_x():
+def F4_transv_1():
     return np.array(
         [
             [sp.S(8), -sp.S(4), -sp.S(4), z, z, z],
@@ -45,7 +45,7 @@ def A4_transv_x():
     )
 
 
-def A4_transv_y():
+def F4_transv_2():
     return np.array(
         [
             [sp.S(3), -sp.S(4), sp.S(1), z, z, z],
@@ -59,7 +59,7 @@ def A4_transv_y():
     )
 
 
-def A4_transv_z():
+def F4_transv_3():
     return np.array(
         [
             [sp.S(3), sp.S(1), -sp.S(4), z, z, z],
@@ -74,15 +74,15 @@ def A4_transv_z():
 
 
 def dev4_transv_x_by_rho_x():
-    return rho_x * A4_transv_x()
+    return rho_x * F4_transv_1()
 
 
 def dev4_transv_y_by_rho_y():
-    return rho_y * A4_transv_y()
+    return rho_y * F4_transv_2()
 
 
 def dev4_transv_z_by_rho_z():
-    return rho_z * A4_transv_z()
+    return rho_z * F4_transv_3()
 
 
 def dev4_ortho_by_rho_x_rho_y_rho_z():
