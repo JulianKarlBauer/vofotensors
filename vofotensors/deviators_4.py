@@ -103,15 +103,15 @@ def dev4_ortho_by_d1_d2_d3():
     )
 
 
-def dev4_monoclinic_by_abcmn_z():
+def dev4_monoclinic_by_d1_d2_d3_d4_d5():
     return dev4_ortho_by_d1_d2_d3() + np.array(
         [
-            [z, z, z, -(m + n), z, z],
-            [z, z, z, m, z, z],
-            [z, z, z, n, z, z],
-            [-(m + n), m, n, z, z, z],
-            [z, z, z, z, z, -sqrt_two * (m + n)],
-            [z, z, z, z, -sqrt_two * (m + n), z],
+            [z, z, z, -(d4 + d5), z, z],
+            [z, z, z, d4, z, z],
+            [z, z, z, d5, z, z],
+            [-(d4 + d5), d4, d5, z, z, z],
+            [z, z, z, z, z, -sqrt_two * (d4 + d5)],
+            [z, z, z, z, -sqrt_two * (d4 + d5), z],
         ],
         dtype=object,
     )
@@ -166,7 +166,7 @@ dev4s_parametric = {
         "rho3": dev4_transv_z_by_rho3(),
     },
     "monoclinic": {
-        "a_b_c_m_n_in_z_direction": dev4_monoclinic_by_abcmn_z(),
+        "a_b_c_m_n_in_z_direction": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
     },
 }
 
@@ -200,7 +200,7 @@ N4s_pairs = {
     "monoclinic": {
         "alpha1_alpha3_a_b_c_m_n": {
             "D2": dev2_by_alpha1_alpha3(),
-            "D4": dev4_monoclinic_by_abcmn_z(),
+            "D4": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
         },
     },
     "triclinic": {
