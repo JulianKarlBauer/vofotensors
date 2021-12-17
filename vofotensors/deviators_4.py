@@ -26,6 +26,7 @@ from vofotensors.abc import (
     d8,
     d9,
 )
+from vofotensors import substitutions
 
 ##################
 # N4
@@ -145,13 +146,17 @@ def dev4_triclinic_by_d():
 
 def dev4_planar_alpha1_d_0_d_7():
     return np.array(
-        sp.Matrix(dev4_triclinic_by_d()).subs(substitutions["planar_alpha_d"])
+        sp.Matrix(dev4_triclinic_by_d()).subs(
+            substitutions.substitutions["planar_alpha_d"]
+        )
     )
 
 
 def dev4_planar_la_0_d_0_d_7():
     return np.array(
-        sp.Matrix(dev4_triclinic_by_d()).subs(substitutions["planar_la0_d"])
+        sp.Matrix(dev4_triclinic_by_d()).subs(
+            substitutions.substitutions["planar_la0_d"]
+        )
     )
 
 
