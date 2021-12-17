@@ -28,15 +28,7 @@ from vofotensors.abc import (
     d9,
 )
 from collections import defaultdict
-
-
-def map_nested(dictionary, transformation):
-    # https://stackoverflow.com/a/49897410/8935243
-    for each in dictionary:
-        if type(dictionary[each]) == dict:
-            map_nested(dictionary[each], transformation)
-        else:
-            dictionary[each] = transformation(dictionary[each])
+from vofotensors import utils
 
 
 ################################################
@@ -228,4 +220,4 @@ dev2s_parametric = {
 }
 
 N2s_parametric = copy.deepcopy(dev2s_parametric)
-map_nested(dictionary=N2s_parametric, transformation=dev2_to_N2)
+utils.map_nested(dictionary=N2s_parametric, transformation=dev2_to_N2)
