@@ -1,10 +1,10 @@
-[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Python package](https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021/workflows/Python%20package/badge.svg)
 [![DOI](https://zenodo.org/badge/356695831.svg)](https://zenodo.org/badge/latestdoi/356695831)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
-# V(ariety)O(f)F(iber)O(rientation)TENSORS
+# V(ariety) O(f) F(iber) O(rientation) TENSORS
 
 This repository contains a Python package with most of the fiber orientation parameterizations
 defined in the paper
