@@ -4,8 +4,6 @@
 import numpy as np
 import sympy as sp
 import copy
-
-from collections import defaultdict
 from vofotensors import utils
 from vofotensors import deviators_2
 from vofotensors import deviators_4
