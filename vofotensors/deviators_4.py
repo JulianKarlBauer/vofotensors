@@ -73,21 +73,21 @@ def F4_transv_3():
     )
 
 
-def dev4_transv_x_by_rho_x():
-    return rho_x * F4_transv_1()
+def dev4_transv_x_by_rho1():
+    return rho1 * F4_transv_1()
 
 
-def dev4_transv_y_by_rho_y():
-    return rho_y * F4_transv_2()
+def dev4_transv_y_by_rho2():
+    return rho2 * F4_transv_2()
 
 
-def dev4_transv_z_by_rho_z():
-    return rho_z * F4_transv_3()
+def dev4_transv_z_by_rho3():
+    return rho3 * F4_transv_3()
 
 
-def dev4_ortho_by_rho_x_rho_y_rho_z():
+def dev4_ortho_by_rho1_rho2_rho3():
     return (
-        dev4_transv_x_by_rho_x() + dev4_transv_y_by_rho_y() + dev4_transv_z_by_rho_z()
+        dev4_transv_x_by_rho1() + dev4_transv_y_by_rho2() + dev4_transv_z_by_rho3()
     )
 
 
@@ -191,9 +191,9 @@ dev4s_parametric = {
         "la_0_d_0_d_7": dev4_planar_la_0_d_0_d_7(),
     },
     "transv_isotropic": {
-        "rho_x": dev4_transv_x_by_rho_x(),
-        "rho_y": dev4_transv_y_by_rho_y(),
-        "rho_z": dev4_transv_z_by_rho_z(),
+        "rho1": dev4_transv_x_by_rho1(),
+        "rho2": dev4_transv_y_by_rho2(),
+        "rho3": dev4_transv_z_by_rho3(),
     },
     "trigonal": {
         "d_e_f_in_x_direction": dev4_trigonal_by_def_x(),
@@ -217,18 +217,18 @@ N4s_pairs = {
         },
     },
     "transv_isotropic": {
-        "alpha_x_rho_x": {"D2": dev2_by_alpha_x(), "D4": dev4_transv_x_by_rho_x()},
-        "alpha_y_rho_y": {"D2": dev2_by_alpha_y(), "D4": dev4_transv_y_by_rho_y()},
-        "alpha_z_rho_z": {"D2": dev2_by_alpha_z(), "D4": dev4_transv_z_by_rho_z()},
+        "alpha_x_rho1": {"D2": dev2_by_alpha_x(), "D4": dev4_transv_x_by_rho1()},
+        "alpha_y_rho2": {"D2": dev2_by_alpha_y(), "D4": dev4_transv_y_by_rho2()},
+        "alpha_z_rho3": {"D2": dev2_by_alpha_z(), "D4": dev4_transv_z_by_rho3()},
     },
     "trigonal": {
         "alpha_z_def_z": {"D2": dev2_by_alpha_z(), "D4": dev4_trigonal_by_def_z()},
     },
     "orthotropic": {
         "a2_b2_a_b_c": {"D2": dev2_by_a2_b2(), "D4": dev4_ortho_by_abc()},
-        "alpha_x_alpha_z_rho_x_rho_y_rho_z": {
+        "alpha_x_alpha_z_rho1_rho2_rho3": {
             "D2": dev2_by_alpha_x_alpha_z(),
-            "D4": dev4_ortho_by_rho_x_rho_y_rho_z(),
+            "D4": dev4_ortho_by_rho1_rho2_rho3(),
         },
         "alpha_x_alpha_z_a_b_c": {
             "D2": dev2_by_alpha_x_alpha_z(),
