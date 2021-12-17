@@ -56,7 +56,7 @@ substitutions = {
         d8: -d7,
     },
     "planar_la1_d": {
-        la2: 1 - la1,
+        la2: sp.S(1) - la1,
         d1: sp.sympify("1/140") * (-sp.S(15) * alpha1_in_la1 - sp.S(6)),
         d2: sp.sympify("1/140") * (sp.S(15) * alpha1_in_la1 - sp.S(6)),
         d3: z,
