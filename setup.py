@@ -15,7 +15,7 @@ setuptools.setup(
     package_dir={"vofotensors": "vofotensors"},
     install_requires=[
         "numpy",
-        "scipy",
+        "sympy",
         # "mechkit>=0.2.6",
     ],
     # setup_requires=["pybind11>=2.3", "libcgal-dev", "libeigen3-dev"],
