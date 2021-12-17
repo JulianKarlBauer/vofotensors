@@ -144,7 +144,7 @@ def dev4_triclinic_by_d():
     )
 
 
-def dev4_planar_alpha1_d0_d7():
+def dev4_planar_alpha1_d1_d8():
     return np.array(
         sp.Matrix(dev4_triclinic_by_d()).subs(
             substitutions.substitutions["planar_alpha_d"]
@@ -152,18 +152,18 @@ def dev4_planar_alpha1_d0_d7():
     )
 
 
-def dev4_planar_la0_d0_d7():
+def dev4_planar_la1_d1_d8():
     return np.array(
         sp.Matrix(dev4_triclinic_by_d()).subs(
-            substitutions.substitutions["planar_la0_d"]
+            substitutions.substitutions["planar_la1_d"]
         )
     )
 
 
 dev4s_parametric = {
     "planar": {
-        "alpha1_d_0_d_7": dev4_planar_alpha1_d0_d7(),
-        "la_0_d_0_d_7": dev4_planar_la0_d0_d7(),
+        "alpha1_d_0_d_7": dev4_planar_alpha1_d1_d8(),
+        "la_0_d_0_d_7": dev4_planar_la1_d1_d8(),
     },
     "transv_isotropic": {
         "rho1": dev4_transv_x_by_rho1(),
