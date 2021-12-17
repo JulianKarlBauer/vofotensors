@@ -202,14 +202,14 @@ def dev2_planar_by_alpha1():
     )
 
 
-def dev2_planar_by_la_0():
+def dev2_planar_by_la1():
     return np.array(sp.Matrix(dev2_by_la1_la2()).subs(substitutions["planar_la1_d"]))
 
 
 dev2s_parametric = {
     "planar": {
         "alpha1": dev2_planar_by_alpha1(),
-        "la_0": dev2_planar_by_la_0(),
+        "la1": dev2_planar_by_la1(),
     },
     "transv_isotropic": {
         "alpha1": dev2_by_alpha1(),
