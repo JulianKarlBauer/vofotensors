@@ -12,19 +12,9 @@ from vofotensors.abc import (
     la1,
     la2,
     la3,
-    rho,
-    rho1,
-    rho2,
-    rho3,
     d1,
     d2,
     d3,
-    d4,
-    d5,
-    d6,
-    d7,
-    d8,
-    d9,
 )
 from vofotensors import substitutions
 from vofotensors.basic_tensors import N2_iso

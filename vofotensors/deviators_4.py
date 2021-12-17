@@ -5,14 +5,6 @@ import numpy as np
 import sympy as sp
 from vofotensors.numbers import z, sqrt_two, two
 from vofotensors.abc import (
-    alpha,
-    alpha1,
-    alpha2,
-    alpha3,
-    la1,
-    la2,
-    la3,
-    rho,
     rho1,
     rho2,
     rho3,
