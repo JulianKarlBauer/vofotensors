@@ -4,6 +4,7 @@
 import numpy as np
 import sympy as sp
 import vofotensors as vot
+from pprint import pprint
 
 
 def print_nested(dictionary):
@@ -14,7 +15,7 @@ def print_nested(dictionary):
             print_nested(dictionary[each])
         else:
             print(each)
-            print(dictionary[each])
+            pprint(sp.Matrix(dictionary[each]))
             print()
 
 
