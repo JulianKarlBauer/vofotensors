@@ -5,6 +5,7 @@ from vofotensors import notation
 import itertools
 import numpy as np
 import sympy as sp
+from pprint import pprint
 
 
 def dev2_to_N2(dev2):
@@ -18,6 +19,18 @@ def map_nested(dictionary, transformation):
             map_nested(dictionary[each], transformation)
         else:
             dictionary[each] = transformation(dictionary[each])
+
+
+def print_nested(dictionary):
+    for each in dictionary:
+        if type(dictionary[each]) == dict:
+            print("###")
+            print("Group:", each)
+            print_nested(dictionary[each])
+        else:
+            print(each)
+            pprint(sp.Matrix(dictionary[each]))
+            print()
 
 
 def sym(tensor):
