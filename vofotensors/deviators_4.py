@@ -235,10 +235,6 @@ N4s_pairs = {
             "D4": dev4_ortho_by_abc(),
         },
     },
-    "2transv_4orthotropic": {
-        "alpha_x_a_b_c": {"D2": dev2_by_alpha_x(), "D4": dev4_ortho_by_abc()},
-        "alpha_z_a_b_c": {"D2": dev2_by_alpha_z(), "D4": dev4_ortho_by_abc()},
-    },
     "monoclinic": {
         "alpha_x_alpha_z_a_b_c_m_n": {
             "D2": dev2_by_alpha_x_alpha_z(),
