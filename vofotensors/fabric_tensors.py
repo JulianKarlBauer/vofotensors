@@ -76,7 +76,7 @@ def A2_iso():
     return sp.S(1) / sp.S(3) * sb.to_numpy(sb.get_I2())
 
 
-def A2_transv_x():
+def F2_transv_1():
     return np.array(
         [
             [sp.S(1), z, z],
@@ -87,7 +87,7 @@ def A2_transv_x():
     )
 
 
-def A2_transv_y():
+def F2_transv_2():
     return np.array(
         [
             [-half, z, z],
@@ -98,7 +98,7 @@ def A2_transv_y():
     )
 
 
-def A2_transv_z():
+def F2_transv_3():
     return np.array(
         [
             [-half, z, z],
@@ -153,15 +153,15 @@ def dev2_transv_z_by_la2():
 
 
 def dev2_by_alpha1():
-    return alpha1 * A2_transv_x()
+    return alpha1 * F2_transv_1()
 
 
 def dev2_by_alpha2():
-    return alpha2 * A2_transv_y()
+    return alpha2 * F2_transv_2()
 
 
 def dev2_by_alpha3():
-    return alpha3 * A2_transv_z()
+    return alpha3 * F2_transv_3()
 
 
 def dev2_by_a2_b2():
@@ -187,11 +187,11 @@ def dev2_by_a2_c2():
 
 
 def dev2_by_alpha1_alpha3():
-    return alpha1 * A2_transv_x() + alpha3 * A2_transv_z()
+    return alpha1 * F2_transv_1() + alpha3 * F2_transv_3()
 
 
 def dev2_by_alpha1_alpha2_alpha3():
-    return dev2_by_alpha1_alpha3() + alpha2 * A2_transv_y()
+    return dev2_by_alpha1_alpha3() + alpha2 * F2_transv_2()
 
 
 def dev2_by_la1_la2():
