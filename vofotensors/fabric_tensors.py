@@ -13,6 +13,7 @@ from vofotensors import deviators_2
 ################################################
 # Parametrizations
 
+# Second order
 
 dev2s_parametric = {
     "planar": {
@@ -35,3 +36,5 @@ dev2s_parametric = {
 
 N2s_parametric = copy.deepcopy(dev2s_parametric)
 utils.map_nested(dictionary=N2s_parametric, transformation=utils.dev2_to_N2)
+
+# Fourth order
