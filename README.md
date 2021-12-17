@@ -6,7 +6,8 @@
 
 # V(ariety) O(f) F(iber) O(rientation) TENSORS
 
-This repository contains a Python package with most of the fiber orientation parameterizations
+This repository contains a Python package called `vofotensors`  
+which contains most of the parameterizations of fiber orientation tensors
 defined in the paper
 
 ```bibtex
