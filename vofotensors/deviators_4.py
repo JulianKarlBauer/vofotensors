@@ -103,32 +103,6 @@ def dev4_ortho_by_abc():
     )
 
 
-def dev4_trigonal_by_def_z():
-    return np.array(
-        [
-            [-(d + e), d, e, sqrt_two * f, z, z],
-            [d, -(d + e), e, -sqrt_two * f, z, z],
-            [e, e, -(e + e), z, z, z],
-            [sqrt_two * f, -sqrt_two * f, z, two * e, z, z],
-            [z, z, z, z, two * e, two * f],
-            [z, z, z, z, two * f, two * d],
-        ],
-        dtype=object,
-    )
-
-
-def dev4_trigonal_by_def_x():
-    return sb.actively_rotate_mandel(
-        mandel=dev4_trigonal_by_def_z(),
-        Q=sb.transformation.rotations["z_to_x"],
-    )
-
-
-def dev4_trigonal_by_def_y():
-    return sb.actively_rotate_mandel(
-        mandel=dev4_trigonal_by_def_z(),
-        Q=sb.transformation.rotations["z_to_y"],
-    )
 
 
 def dev4_monoclinic_by_abcmn_z():
@@ -193,11 +167,6 @@ dev4s_parametric = {
         "rho2": dev4_transv_y_by_rho2(),
         "rho3": dev4_transv_z_by_rho3(),
     },
-    "trigonal": {
-        "d_e_f_in_x_direction": dev4_trigonal_by_def_x(),
-        "d_e_f_in_y_direction": dev4_trigonal_by_def_y(),
-        "d_e_f_in_z_direction": dev4_trigonal_by_def_z(),
-    },
     "monoclinic": {
         "a_b_c_m_n_in_z_direction": dev4_monoclinic_by_abcmn_z(),
     },
@@ -218,9 +187,6 @@ N4s_pairs = {
         "alpha1_rho1": {"D2": dev2_by_alpha1(), "D4": dev4_transv_x_by_rho1()},
         "alpha2_rho2": {"D2": dev2_by_alpha2(), "D4": dev4_transv_y_by_rho2()},
         "alpha3_rho3": {"D2": dev2_by_alpha3(), "D4": dev4_transv_z_by_rho3()},
-    },
-    "trigonal": {
-        "alpha3_def_z": {"D2": dev2_by_alpha3(), "D4": dev4_trigonal_by_def_z()},
     },
     "orthotropic": {
         "a2_b2_a_b_c": {"D2": dev2_by_a2_b2(), "D4": dev4_ortho_by_abc()},
