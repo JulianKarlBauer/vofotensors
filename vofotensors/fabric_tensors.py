@@ -164,26 +164,7 @@ def dev2_by_alpha3():
     return alpha3 * F2_transv_3()
 
 
-def dev2_by_a2_b2():
-    return np.array(
-        [
-            [a2, z, z],
-            [z, b2, z],
-            [z, z, -(a2 + b2)],
-        ],
-        dtype=object,
-    )
 
-
-def dev2_by_a2_c2():
-    return np.array(
-        [
-            [a2, z, z],
-            [z, -(a2 + c2), z],
-            [z, z, c2],
-        ],
-        dtype=object,
-    )
 
 
 def dev2_by_alpha1_alpha3():
@@ -244,8 +225,6 @@ dev2s_parametric = {
     "orthotropic": {
         "la1_la2": dev2_by_la1_la2(),
         "la1_la2_la3": dev2_by_la1_la2_la3(),
-        "a2_b2": dev2_by_a2_b2(),
-        "a2_c2": dev2_by_a2_c2(),
         "alpha1_alpha3": dev2_by_alpha1_alpha3(),
         "alpha1_alpha2_alpha3": dev2_by_alpha1_alpha2_alpha3(),
     },
