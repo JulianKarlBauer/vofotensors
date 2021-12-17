@@ -29,6 +29,18 @@ Please see [license](https://github.com/JulianKarlBauer/fiberspot/blob/main/LICE
 [acknowledgment](#acknowledgment)
 and cite the [paper given above][url_mms_article] and the latest [Zenodo-DOI][latest_doi].
 
+## Installation
+
+- Clone this repository to your machine
+	```shell
+	git clone 
+	```
+- Install the package from the local clone into the current environment in develop mode:
+	```shell
+	python setup.py develop
+	```
+
+Note: [Develop vs. install](https://stackoverflow.com/a/19048754/8935243)
 
 ## Acknowledgment
 
