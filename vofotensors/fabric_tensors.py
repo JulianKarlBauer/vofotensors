@@ -7,16 +7,16 @@ import copy
 from vofotensors.numbers import z, half
 from vofotensors.abc import (
     alpha,
-    alpha_1,
-    alpha_2,
-    alpha_3,
+    alpha1,
+    alpha2,
+    alpha3,
     la1,
     la2,
     la3,
     rho,
-    rho_1,
-    rho_2,
-    rho_3,
+    rho1,
+    rho2,
+    rho3,
     d1,
     d2,
     d3,
@@ -42,13 +42,13 @@ def map_nested(dictionary, transformation):
 ################################################
 # Parametrizations
 
-alpha_1_in_la1 = sp.sympify("4/3") * la1 - sp.sympify("2/3")
+alpha1_in_la1 = sp.sympify("4/3") * la1 - sp.sympify("2/3")
 
 substitutions = {
     "planar_alpha_d": {
-        alpha_3: alpha_1 / sp.S(2) - sp.sympify("1/3"),
-        d1: sp.sympify("1/140") * (-sp.S(15) * alpha_1 - sp.S(6)),
-        d2: sp.sympify("1/140") * (sp.S(15) * alpha_1 - sp.S(6)),
+        alpha3: alpha1 / sp.S(2) - sp.sympify("1/3"),
+        d1: sp.sympify("1/140") * (-sp.S(15) * alpha1 - sp.S(6)),
+        d2: sp.sympify("1/140") * (sp.S(15) * alpha1 - sp.S(6)),
         d3: z,
         d4: z,
         d5: z,
@@ -57,8 +57,8 @@ substitutions = {
     },
     "planar_la1_d": {
         la2: 1 - la1,
-        d1: sp.sympify("1/140") * (-sp.S(15) * alpha_1_in_la1 - sp.S(6)),
-        d2: sp.sympify("1/140") * (sp.S(15) * alpha_1_in_la1 - sp.S(6)),
+        d1: sp.sympify("1/140") * (-sp.S(15) * alpha1_in_la1 - sp.S(6)),
+        d2: sp.sympify("1/140") * (sp.S(15) * alpha1_in_la1 - sp.S(6)),
         d3: z,
         d4: z,
         d5: z,
@@ -152,16 +152,16 @@ def dev2_transv_z_by_la2():
     return N2 - A2_iso()
 
 
-def dev2_by_alpha_1():
-    return alpha_1 * A2_transv_x()
+def dev2_by_alpha1():
+    return alpha1 * A2_transv_x()
 
 
-def dev2_by_alpha_2():
-    return alpha_2 * A2_transv_y()
+def dev2_by_alpha2():
+    return alpha2 * A2_transv_y()
 
 
-def dev2_by_alpha_3():
-    return alpha_3 * A2_transv_z()
+def dev2_by_alpha3():
+    return alpha3 * A2_transv_z()
 
 
 def dev2_by_a2_b2():
@@ -186,12 +186,12 @@ def dev2_by_a2_c2():
     )
 
 
-def dev2_by_alpha_1_alpha_3():
-    return alpha_1 * A2_transv_x() + alpha_3 * A2_transv_z()
+def dev2_by_alpha1_alpha3():
+    return alpha1 * A2_transv_x() + alpha3 * A2_transv_z()
 
 
-def dev2_by_alpha_1_alpha_2_alpha_3():
-    return dev2_by_alpha_1_alpha_3() + alpha_2 * A2_transv_y()
+def dev2_by_alpha1_alpha2_alpha3():
+    return dev2_by_alpha1_alpha3() + alpha2 * A2_transv_y()
 
 
 def dev2_by_la1_la2():
@@ -218,9 +218,9 @@ def dev2_by_la1_la2_la3():
     return N2 - A2_iso()
 
 
-def dev2_planar_by_alpha_1():
+def dev2_planar_by_alpha1():
     return np.array(
-        sp.Matrix(dev2_by_alpha_1_alpha_3()).subs(substitutions["planar_alpha_d"])
+        sp.Matrix(dev2_by_alpha1_alpha3()).subs(substitutions["planar_alpha_d"])
     )
 
 
@@ -230,13 +230,13 @@ def dev2_planar_by_la_0():
 
 dev2s_parametric = {
     "planar": {
-        "alpha_1": dev2_planar_by_alpha_1(),
+        "alpha1": dev2_planar_by_alpha1(),
         "la_0": dev2_planar_by_la_0(),
     },
     "transv_isotropic": {
-        "alpha_1": dev2_by_alpha_1(),
-        "alpha_2": dev2_by_alpha_2(),
-        "alpha_3": dev2_by_alpha_3(),
+        "alpha1": dev2_by_alpha1(),
+        "alpha2": dev2_by_alpha2(),
+        "alpha3": dev2_by_alpha3(),
         "la1": dev2_transv_by_la1(),
         "la2_x": dev2_transv_x_by_la2(),
         "la2_z": dev2_transv_z_by_la2(),
@@ -246,12 +246,10 @@ dev2s_parametric = {
         "la1_la2_la3": dev2_by_la1_la2_la3(),
         "a2_b2": dev2_by_a2_b2(),
         "a2_c2": dev2_by_a2_c2(),
-        "alpha_1_alpha_3": dev2_by_alpha_1_alpha_3(),
-        "alpha_1_alpha_2_alpha_3": dev2_by_alpha_1_alpha_2_alpha_3(),
+        "alpha1_alpha3": dev2_by_alpha1_alpha3(),
+        "alpha1_alpha2_alpha3": dev2_by_alpha1_alpha2_alpha3(),
     },
 }
 
 N2s_parametric = copy.deepcopy(dev2s_parametric)
 map_nested(dictionary=N2s_parametric, transformation=dev2_to_N2)
-
-
