@@ -89,24 +89,22 @@ def dev4_ortho_by_rho1_rho2_rho3():
     return dev4_transv_x_by_rho1() + dev4_transv_y_by_rho2() + dev4_transv_z_by_rho3()
 
 
-def dev4_ortho_by_abc():
+def dev4_ortho_by_d1_d2_d3():
     return np.array(
         [
-            [-(a + b), a, b, z, z, z],
-            [a, -(a + c), c, z, z, z],
-            [b, c, -(b + c), z, z, z],
-            [z, z, z, two * c, z, z],
-            [z, z, z, z, two * b, z],
-            [z, z, z, z, z, two * a],
+            [-(d1 + d2), d1, d2, z, z, z],
+            [d1, -(d1 + d3), d3, z, z, z],
+            [d2, d3, -(d2 + d3), z, z, z],
+            [z, z, z, two * d3, z, z],
+            [z, z, z, z, two * d2, z],
+            [z, z, z, z, z, two * d1],
         ],
         dtype=object,
     )
 
 
-
-
 def dev4_monoclinic_by_abcmn_z():
-    return dev4_ortho_by_abc() + np.array(
+    return dev4_ortho_by_d1_d2_d3() + np.array(
         [
             [z, z, z, -(m + n), z, z],
             [z, z, z, m, z, z],
@@ -189,14 +187,14 @@ N4s_pairs = {
         "alpha3_rho3": {"D2": dev2_by_alpha3(), "D4": dev4_transv_z_by_rho3()},
     },
     "orthotropic": {
-        "a2_b2_a_b_c": {"D2": dev2_by_a2_b2(), "D4": dev4_ortho_by_abc()},
+        "a2_b2_a_b_c": {"D2": dev2_by_a2_b2(), "D4": dev4_ortho_by_d1_d2_d3()},
         "alpha1_alpha3_rho1_rho2_rho3": {
             "D2": dev2_by_alpha1_alpha3(),
             "D4": dev4_ortho_by_rho1_rho2_rho3(),
         },
         "alpha1_alpha3_a_b_c": {
             "D2": dev2_by_alpha1_alpha3(),
-            "D4": dev4_ortho_by_abc(),
+            "D4": dev4_ortho_by_d1_d2_d3(),
         },
     },
     "monoclinic": {
