@@ -7,6 +7,7 @@ dependencies:
   - attrs=21.2.0=pyhd3eb1b0_0
   - backcall=0.2.0=pyhd3eb1b0_0
   - blas=1.0=mkl
+  - bottleneck=1.3.2=py39hdd57654_1
   - ca-certificates=2021.10.26=h06a4308_2
   - certifi=2021.10.8=py39h06a4308_0
   - decorator=5.1.0=pyhd3eb1b0_0
@@ -30,10 +31,12 @@ dependencies:
   - mpfr=4.0.2=hb69a4c5_1
   - mpmath=1.2.1=py39h06a4308_0
   - ncurses=6.3=h7f8727e_2
+  - numexpr=2.7.3=py39h22e1b3c_1
   - numpy=1.21.2=py39h20f2e39_0
   - numpy-base=1.21.2=py39h79a1101_0
   - openssl=1.1.1l=h7f8727e_0
   - packaging=21.3=pyhd3eb1b0_0
+  - pandas=1.3.4=py39h8c16a72_0
   - parso=0.8.2=pyhd3eb1b0_0
   - pexpect=4.8.0=pyhd3eb1b0_3
   - pickleshare=0.7.5=pyhd3eb1b0_1003
@@ -46,6 +49,8 @@ dependencies:
   - pyparsing=3.0.4=pyhd3eb1b0_0
   - pytest=6.2.5=py39h06a4308_2
   - python=3.9.7=h12debd9_1
+  - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - pytz=2021.3=pyhd3eb1b0_0
   - readline=8.1=h27cfd23_0
   - setuptools=58.0.4=py39h06a4308_0
   - six=1.16.0=pyhd3eb1b0_0
