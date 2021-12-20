@@ -7,6 +7,8 @@
 \pgfplotsset{compat=newest}
 \usetikzlibrary{arrows}
 
+% Font
+\usepackage{arev}
 
 \pgfmathdeclarerandomlist{MyRandomColors}{%
 {red}%
@@ -68,7 +70,7 @@
     ( {-\myradius*cos(\i)*\j/100}, {-\myradius*sin(\i)*\j/100} );
 }
 
-
+\node at (\myradius, -\myradius/2) {\Large VoFOTensors};
 
 \end{tikzpicture}
 
