@@ -16,10 +16,8 @@ setuptools.setup(
     install_requires=[
         "numpy",
         "sympy",
-        # "mechkit>=0.2.6",
+        "pandas",  # Required for example s003...
     ],
-    # setup_requires=["pybind11>=2.3", "libcgal-dev", "libeigen3-dev"],
-    # extras_require={"test": ["pytest", "natsort"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
