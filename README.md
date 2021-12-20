@@ -3,6 +3,11 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+<p align="center">
+  <a href="https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021">
+  <img alt="VoFoTensors" src="logo/logo.png" width="35%">
+  </a>
+</p>
 
 # V(ariety) O(f) F(iber) O(rientation) TENSORS
 
