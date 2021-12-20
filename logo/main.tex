@@ -23,17 +23,17 @@
 
 \pgfmathsetseed{1}
 
-\pgfmathsetmacro{\mylength}{2.6}
-\pgfmathsetmacro{\myradius}{2}
+\pgfmathsetmacro{\mylength}{1.65}
+\pgfmathsetmacro{\myradius}{1.2}
 \pgfmathsetmacro{\myfactor}{3/5}
 
 
 \begin{tikzpicture}[x=1.cm,y=1cm,z=1cm*\myfactor,>=stealth]
 
 % Axes
-\draw[->, line width=0.4mm] (xyz cs:x=-\mylength) -- (xyz cs:x=\mylength) node[above] {$\mathbf{v}_1$};
-\draw[->, line width=0.4mm] (xyz cs:y=-\mylength) -- (xyz cs:y=\mylength) node[above] {$\mathbf{v}_2$};
-\draw[->, line width=0.4mm] (xyz cs:z=-\mylength) -- (xyz cs:z=\mylength) node[above right] {$\mathbf{v}_3$};
+\draw[->, line width=0.4mm] (xyz cs:x=-0.8*\mylength) -- (xyz cs:x=\mylength) node[above] {$\mathbf{v}_1$};
+\draw[->, line width=0.4mm] (xyz cs:y=-0.8*\mylength) -- (xyz cs:y=\mylength) node[right] {$\mathbf{v}_2$};
+\draw[->, line width=0.4mm] (xyz cs:z=-0.8*\mylength) -- (xyz cs:z=\mylength) node[right] {$\mathbf{v}_3$};
 
 
 % Circle
@@ -71,7 +71,7 @@
 }
 
 % \node at (\myradius, -\myradius/2) {\Large VoFOTensors};
-\node at (\myradius/2.35, -\myradius) {\Huge VoFOTensors};
+\node at (2.9, -0.8) {\Huge VoFOTensors};
 
 \end{tikzpicture}
 
