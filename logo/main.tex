@@ -1,0 +1,95 @@
+\documentclass[tikz, border=1mm]{standalone}
+% \usepackage[mode=buildnew]{standalone}% requires -shell-escape
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows}
+
+
+\pgfmathdeclarerandomlist{MyRandomColors}{%
+{red}%
+{blue}%
+{green}%
+% {orange}%
+% {cyan}%
+% {magenta}%
+}
+
+\begin{document}
+
+\pgfmathsetmacro{\mylength}{2.6}
+\pgfmathsetmacro{\myradius}{2}
+\pgfmathsetmacro{\myfactor}{3/5}
+
+% import numpy as np
+% phi = np.random.uniform(0,360, 10)
+% theta = np.random.uniform(-90,90,10)
+% func = lambda x: list(map(int, x))
+% phis = func(phi)
+% thetas = func(theta)
+%
+% pairs = [f'{phis[index]}/{thetas[index]}'for index in range(len(phi))]
+% print(','.join(pairs))
+
+
+
+\begin{tikzpicture}[x=1.cm,y=1cm,z=1cm*\myfactor,>=stealth]
+
+% Axes
+\draw[->, line width=0.4mm] (xyz cs:x=-\mylength) -- (xyz cs:x=\mylength) node[above] {$\mathbf{v}_1$};
+\draw[->, line width=0.4mm] (xyz cs:y=-\mylength) -- (xyz cs:y=\mylength) node[above] {$\mathbf{v}_2$};
+\draw[->, line width=0.4mm] (xyz cs:z=-\mylength) -- (xyz cs:z=\mylength) node[above right] {$\mathbf{v}_3$};
+
+
+% Circle
+\shade[ball color = black!10!white, opacity = 0.5] (0,0,0) circle (\myradius*1.01);
+
+
+% Fibers
+\foreach \i\j in {
+% 221/-1,256/-80,315/83,103/28,257/68,122/-59,291/58,160/-80,82/-24,50/-59
+% 318/-78,102/46,167/-82,55/67,271/46,47/-22,46/-77,113/85,262/-37,235/-38
+% 287/-80,335/-9,240/-31,239/-10,317/-80,288/-2,17/59,49/-68,96/58,2/-38
+% 264/44,85/46,54/28,208/70,285/90,59/80,138/46,340/56,253/49,51/21
+273/75,63/35,295/32,346/0,65/44,226/72,55/62,242/72,97/28,349/91
+% 72/49,265/9,118/85,297/61,133/98,344/54,125/49,270/29,348/47,52/27
+}
+{
+
+    \pgfmathrandomitem{\RandomColor}{MyRandomColors}
+
+    % \draw[-, \RandomColor]
+    % (xyz spherical cs:radius=\myradius, angle=\i, latitude=\j)
+    %  --
+    % (xyz spherical cs:radius=-\myradius, angle=\i, latitude=\j);
+
+    % \draw[-, \RandomColor, line width=0.4mm]
+    % (xyz cs:x={cos(\i)*sin(\j)*\myradius}, y={sin(\i)*sin(\j)*\myradius}, z={cos(\j)*\myradius*\myfactor})
+    %  --
+    % (xyz cs:x={cos(\i)*sin(\j)*-\myradius}, y={sin(\i)*sin(\j)*-\myradius}, z={cos(\j)*-\myradius*\myfactor});
+
+    \draw[-, \RandomColor, line width=0.6mm]
+    ( {\myradius*cos(\i)*\j/100}, {\myradius*sin(\i)*\j/100} )
+     --
+    ( {-\myradius*cos(\i)*\j/100}, {-\myradius*sin(\i)*\j/100} );
+}
+
+
+
+\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
