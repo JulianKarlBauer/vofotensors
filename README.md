@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021">
-  <img alt="VoFoTensors" src="logo/logo.png" width="35%">
+  <img alt="VoFoTensors" src="logo/logo.png" width="25%">
   </a>
 </p>
 
