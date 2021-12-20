@@ -33,7 +33,7 @@ and cite the [paper given above][url_mms_article] and the latest [Zenodo-DOI][la
 
 - [Clone][url_how_to_clone] this repository to your machine
 - Open a terminal and navigate to your local clone
-- Install the package from the local clone into the current environment in develop mode:
+- Install the package from the local clone into the current [env][url_env_python]i[ronment][url_env_conda] in develop mode:
 	```shell
 	python setup.py develop
 	```
@@ -56,4 +56,7 @@ The support by the [German Research Foundation (DFG)][dfg_website] is gratefully
 [dfg_website]: https://www.dfg.de/
 [latest_doi]: https://zenodo.org/badge/latestdoi/356695831
 [url_mms_article]: https://journals.sagepub.com/doi/full/10.1177/10812865211057602
-[url_how_to_clone]:https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+[url_how_to_clone]: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+[url_env_python]: https://docs.python.org/3/tutorial/venv.html
+[url_env_conda]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
