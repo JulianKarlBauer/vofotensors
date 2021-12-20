@@ -5,11 +5,11 @@
 
 <p align="center">
   <a href="https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021">
-  <img alt="VoFoTensors" src="logo/logo.png" width="25%">
+  <img alt="VoFoTensors" src="logo/logo.png" width="35%">
   </a>
 </p>
 
-# V(ariety) O(f) F(iber) O(rientation) TENSORS
+# V(ariety) o(f) F(iber) O(rientation) Tensors
 
 This repository contains a Python package called `vofotensors`  
 which contains most of the parameterizations of fiber orientation tensors
