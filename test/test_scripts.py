@@ -15,7 +15,7 @@ def get_paths_of_scripts():
     exclude_sub_strings = ["do_not_execute"]
     plot_script_paths = glob.glob(
         os.path.join(
-            os.path.dirname(THIS_FILES_DIR_PATH), "vofotensors", "scripts", "*.py"
+            os.path.dirname(THIS_FILES_DIR_PATH), "examples", "*.py"
         )
     )
     plot_script_paths_sorted = sorted(plot_script_paths)
