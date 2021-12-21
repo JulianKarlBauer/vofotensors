@@ -1,11 +1,11 @@
 # This workflow installs Python dependencies and runs tests with a variety of Python versions
 name: Pytest the package
 
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+on:
+  push:
+    # branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
