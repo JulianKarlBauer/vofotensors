@@ -48,10 +48,7 @@ Note: [Develop vs. install](https://stackoverflow.com/a/19048754/8935243)
 
 ## Examples
 
-Print available parameterizations to your Python prompt by executing these scripts:
-- [`vofotensors/scripts/s001_print_available_N2.py`](vofotensors/scripts/s001_print_available_N2.py)
-- [`vofotensors/scripts/s002_print_available_N4.py`](vofotensors/scripts/s002_print_available_N4.py)
-- [`vofotensors/scripts/s003_get_N4_by_dataframe.py`](vofotensors/scripts/s003_get_N4_by_dataframe.py)
+Both example notebooks and example scripts are given [here](examples/).
 
 ## Acknowledgment
 
