@@ -23,18 +23,6 @@ boundary = np.concatenate(
 )
 
 
-###############
-# # Optional plot of points
-# import matplotlib.pyplot as plt
-#
-# # # Optional triangulation
-# # from scipy.spatial import Delaunay
-# # tri = Delaunay(boundary, incremental=True)
-# # plt.triplot(boundary[:, 0], boundary[:, 1], tri.simplices)
-#
-# plt.plot(boundary[:, 0], boundary[:, 1], "o")
-# plt.show()
-
 df = pd.DataFrame(boundary, columns=["alpha1", "rho1"])
 
 ###################
@@ -46,4 +34,4 @@ parameterization = parameterizations["transv_isotropic"]["alpha1_rho1"]
 N4_func = sp.lambdify([alpha1, rho1], parameterization)
 
 df["N4"] = df.apply(lambda row: N4_func(alpha1=row["alpha1"], rho1=row["rho1"]), axis=1)
-
+print(df)
