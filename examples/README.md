@@ -3,7 +3,7 @@
 
 Python scripts (.py) are the original source
 but are converted to
-Jupyter notebooks (.ipynb) based on `Makefile`.
+Jupyter notebooks (.ipynb) based on [`Makefile`](Makefile).
 
 Both scripts and notebooks are version controlled.
 Please use what you like better.
