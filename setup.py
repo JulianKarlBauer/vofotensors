@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="vofotensors",
-    version="0.0.1",
+    version="1.0.0",
     author="Julian Karl Bauer",
     author_email="juliankarlbauer@gmx.de",
     description="V(ariety)O(f)F(iber)O(rientation)TENSORS "
