@@ -37,6 +37,12 @@ and cite the [paper given above][url_mms_article] and the latest [Zenodo-DOI][la
 
 ## Installation
 
+### Install directly from github
+```
+python -m pip install git+https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021.git
+```
+
+### Install from local clone
 - [Clone][url_how_to_clone] this repository to your machine
 - Open a terminal and navigate to your local clone
 - Install the package from the local clone into the current [env][url_env_python]i[ronment][url_env_conda] in develop mode:
