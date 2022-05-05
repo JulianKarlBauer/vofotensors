@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: >-
+  Please cite this software using the metadata from
+  'preferred-citation'.
+authors:
+  - given-names: Julian Karl
+    family-names: Bauer
+    email: juliankarlbauer@gmx.de
+    affiliation: Karlsruhe Institute of Technology
+    orcid: 'https://orcid.org/0000-0002-4931-5869'
+  - given-names: Thomas
+    family-names: Böhlke
+    email: thomas.boehlke@kit.edu
+    affiliation: Karlsruhe Institute of Technology
+    orcid: 'https://orcid.org/0000-0001-6884-0530'
+repository-code: >-
+    https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.5789939
+license: MIT
+preferred-citation:
+    type: article
+    authors:
+      - given-names: Julian Karl
+        family-names: Bauer
+        email: juliankarlbauer@gmx.de
+        affiliation: Karlsruhe Institute of Technology
+        orcid: 'https://orcid.org/0000-0002-4931-5869'
+      - given-names: Thomas
+        family-names: Böhlke
+        email: thomas.boehlke@kit.edu
+        affiliation: Karlsruhe Institute of Technology
+        orcid: 'https://orcid.org/0000-0001-6884-0530'
+    journal: "Mathematics and Mechanics of Solids"
+    title: "Variety of fiber orientation tensors"
+    volume: "online first"
+    year: 2021
+    identifiers:
+      - type: doi
+        value: 10.1177/10812865211057602
+    keywords:
+      - Fiber orientation tensor
+      - Anisotropy
+      - Harmonic decomposition
+      - Fiber reinforced composites
+    license: CC BY-NC 4.0
+
