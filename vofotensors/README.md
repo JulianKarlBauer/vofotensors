@@ -7,7 +7,12 @@ then tag it locally
 git tag -a v0.0.3 -m "new release"
 ```
 
-and then push including tags
+and then push
+
+```shell
+git push
+```
+and push tags
 
 ```shell
 git push --tags
