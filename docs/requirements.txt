@@ -1,0 +1,6 @@
+ipykernel
+nbsphinx
+sympy
+mechkit
+pandas
+numpy

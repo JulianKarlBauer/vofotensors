@@ -1,7 +1,7 @@
 [![PyPI version](https://badge.fury.io/py/vofotensors.svg)][url_pypi_this_package]
+[![Documentation status](https://readthedocs.org/projects/vofotensors/badge/?version=latest)][url_read_the_docs_latest]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/356695831.svg)](https://zenodo.org/badge/latestdoi/356695831)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JulianKarlBauer/fiber_orientation_tensors_2021/HEAD)
 
@@ -43,6 +43,11 @@ and cite the [paper given above][url_mms_article] and the latest [Zenodo-DOI][la
 python -m pip install git+https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021.git
 ```
 
+### Install from [![PyPI](https://badge.fury.io/py/vofotensors.svg)][url_pypi_this_package]
+```bash
+pip install vofotensors
+```
+
 ### Install from local clone
 - [Clone][url_how_to_clone] this repository to your machine
 - Open a terminal and navigate to your local clone
@@ -55,7 +60,8 @@ Note: [Develop vs. install](https://stackoverflow.com/a/19048754/8935243)
 
 ## Examples
 
-Both example notebooks and example scripts are given [here](examples/).
+Rendered example notebooks are in [the docs][url_read_the_docs_latest_notebooks].
+These notebooks and corresponding scripts can be found [here][url_docs_source_notebooks].
 
 ## Acknowledgment
 
@@ -73,5 +79,9 @@ The support by the [German Research Foundation (DFG)][dfg_website] is gratefully
 
 [url_env_python]: https://docs.python.org/3/tutorial/venv.html
 [url_env_conda]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+[url_read_the_docs_latest]: https://vofotensors.readthedocs.io/en/latest/
+[url_read_the_docs_latest_notebooks]: https://vofotensors.readthedocs.io/en/latest/source/example_notebooks.html
+[url_docs_source_notebooks]: https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021/tree/master/docs/source/notebooks
 
 [url_pypi_this_package]: https://pypi.org/project/vofotensors/
