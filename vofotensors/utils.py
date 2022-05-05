@@ -24,7 +24,7 @@ def map_nested(dictionary, transformation):
 def print_nested(dictionary):
     for each in dictionary:
         if type(dictionary[each]) == dict:
-            print("###")
+            print("\n####################")
             print("Group:", each)
             print_nested(dictionary[each])
         else:
