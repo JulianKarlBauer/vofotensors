@@ -7,7 +7,6 @@ import vofotensors as vot
 from vofotensors.abc import alpha1, rho1
 import pandas as pd
 
-###################
 # Create data
 
 alphas = np.linspace(-1.0 / 3.0, 2.0 / 3.0, 10)
@@ -25,7 +24,6 @@ boundary = np.concatenate(
 
 df = pd.DataFrame(boundary, columns=["alpha1", "rho1"])
 
-###################
 # Get parameterizations
 
 parameterizations = vot.fabric_tensors.N4s_parametric
