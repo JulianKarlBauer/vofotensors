@@ -1,3 +1,4 @@
+[![PyPI version](https://badge.fury.io/py/vofotensors.svg)][url_pypi_this_package]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/356695831.svg)](https://zenodo.org/badge/latestdoi/356695831)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
@@ -72,3 +73,5 @@ The support by the [German Research Foundation (DFG)][dfg_website] is gratefully
 
 [url_env_python]: https://docs.python.org/3/tutorial/venv.html
 [url_env_conda]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+[url_pypi_this_package]: https://pypi.org/project/vofotensors/
