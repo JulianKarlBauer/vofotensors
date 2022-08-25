@@ -18,17 +18,16 @@ which contains most of the parameterizations of fiber orientation tensors
 defined in the paper
 
 ```bibtex
-@article{doi:10.1177/10812865211057602,
-	author = {Julian Karl Bauer and Thomas Böhlke},
-	title ={Variety of fiber orientation tensors},
-	journal = {Mathematics and Mechanics of Solids},
-	volume = {0},
-	number = {0},
-	pages = {10812865211057602},
-	year = {0},
-	doi = {10.1177/10812865211057602},
-	URL = {https://doi.org/10.1177/10812865211057602},
-	eprint = {https://doi.org/10.1177/10812865211057602}
+@article{
+  title={Variety of fiber orientation tensors},
+  author={Bauer, Julian Karl and B{\"o}hlke, Thomas},
+  journal={Mathematics and Mechanics of Solids},
+  publisher={SAGE Publications Sage UK: London, England},
+  doi={10.1177/10812865211057602},
+  volume={27},
+  number={7},
+  pages={1185-1211},
+  year={2022},
 }
 ```
 
@@ -65,9 +64,9 @@ These notebooks and corresponding scripts can be found [here][url_docs_source_no
 
 ## Acknowledgment
 
-The research documented in this repository has been funded by the 
+The research documented in this repository has been funded by the
 [German Research Foundation (DFG, Deutsche Forschungsgemeinschaft)][dfg_website] - project number [255730231][dfg_project].
-The support by the German Research Foundation within the International Research Training Group 
+The support by the German Research Foundation within the International Research Training Group
 [“Integrated engineering of continuous-discontinuous long fiber reinforced polymer structures“ (GRK 2078)][grk_website]
 is gratefully acknowledged.
 
