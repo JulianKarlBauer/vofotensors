@@ -7,7 +7,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setuptools.setup(
     name="vofotensors",
-    version="1.0.3",
+    version="1.0.4",
     author="Julian Karl Bauer",
     author_email="juliankarlbauer@gmx.de",
     description="V(ariety)O(f)F(iber)O(rientation)TENSORS "
