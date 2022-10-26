@@ -13,7 +13,7 @@ setuptools.setup(
     description="V(ariety)O(f)F(iber)O(rientation)TENSORS "
     "contains selected contributions of "
     "Bauer JK, Böhlke T. Variety of fiber orientation tensors. "
-    "Mathematics and Mechanics of Solids. December 2021. "
+    "Mathematics and Mechanics of Solids. 2022. "
     "doi:10.1177/10812865211057602",
     long_description=long_description,
     long_description_content_type="text/markdown",
