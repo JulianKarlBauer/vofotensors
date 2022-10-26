@@ -25,6 +25,12 @@ dev2s = vofotensors.deviators_2
 dev4s = vofotensors.deviators_4
 
 N4s_pairs = {
+    "cubic": {
+        "d1": {
+            "D2": dev2s.dev2_cubic(),
+            "D4": dev4s.dev4_cubic_d1(),
+            }
+        },
     "planar": {
         "alpha1_d1_d8": {
             "D2": dev2s.dev2_planar_by_alpha1(),

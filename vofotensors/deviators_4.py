@@ -66,6 +66,24 @@ def F4_transv_3():
     )
 
 
+def F4_cubic():
+    return np.array(
+        [
+            [-sp.S(2), sp.S(1), sp.S(1), z, z, z],
+            [sp.S(1), -sp.S(2), sp.S(1), z, z, z],
+            [sp.S(1), sp.S(1), -sp.S(2), z, z, z],
+            [z, z, z, sp.S(2), z, z],
+            [z, z, z, z, sp.S(2), z],
+            [z, z, z, z, z, sp.S(2)],
+        ],
+        dtype=object,
+    )
+
+
+def dev4_cubic_d1():
+    return d1 * F4_cubic()
+
+
 def dev4_transv_x_by_rho1():
     return rho1 * F4_transv_1()
 

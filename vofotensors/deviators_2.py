@@ -57,6 +57,17 @@ def F2_transv_3():
     )
 
 
+def dev2_cubic():
+    return np.array(
+        [
+            [z, z, z],
+            [z, z, z],
+            [z, z, z],
+        ],
+        dtype=object,
+    )
+
+
 def dev2_transv_by_la1():
     half_reminder = (sp.S(1) - la1) / sp.S(2)
     N2 = np.array(
