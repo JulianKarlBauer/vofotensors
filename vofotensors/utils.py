@@ -49,6 +49,13 @@ def sym(tensor):
     )
 
 
+def copy_upper_triangle(matrix):
+    r"""Copy upper triangle to lower triangle, i.e. make symmetric"""
+    index_lower_triangle = np.tril_indices(6, -1)
+    matrix[index_lower_triangle] = matrix.T[index_lower_triangle]
+    return matrix
+
+
 def combine_to_N4(D2, D4):
 
     dev2_dyad_I2 = np.array(sp.tensorproduct(I2, sp.Array(D2)))

@@ -19,6 +19,7 @@ from vofotensors.abc import (
     d9,
 )
 from vofotensors import substitutions
+import vofotensors
 
 ##################
 # N4
@@ -128,18 +129,11 @@ def dev4_monoclinic_by_d1_d2_d3_d4_d5():
     )
 
 
-def copy_upper_triangle(matrix):
-    r"""Copy upper triangle to lower triangle, i.e. make symmetric"""
-    index_lower_triangle = np.tril_indices(6, -1)
-    matrix[index_lower_triangle] = matrix.T[index_lower_triangle]
-    return matrix
-
-
 def dev4_triclinic_by_d():
     comp_03 = -sqrt_two * (d4 + d5)
     comp_14 = -sqrt_two * (d6 + d7)
     comp_25 = -sqrt_two * (d8 + d9)
-    return copy_upper_triangle(
+    return vofotensors.utils.copy_upper_triangle(
         np.array(
             [
                 [-(d1 + d2), d1, d2, comp_03, sqrt_two * d6, sqrt_two * d8],
