@@ -56,7 +56,7 @@ N4s_pairs = {
         },
     },
     "orthotropic": {
-        "la1_l2_d1_d2_d3": {
+        "la1_la2_d1_d2_d3": {
             "D2": dev2s.dev2_by_la1_la2(),
             "D4": dev4s.dev4_ortho_by_d1_d2_d3(),
         },
