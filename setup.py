@@ -17,7 +17,7 @@ setuptools.setup(
     "doi:10.1177/10812865211057602",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/JulianKarlBauer/fiber_orientation_tensors_2021",
+    url="https://github.com/JulianKarlBauer/vofotensors",
     packages=["vofotensors"],
     package_dir={"vofotensors": "vofotensors"},
     install_requires=[
