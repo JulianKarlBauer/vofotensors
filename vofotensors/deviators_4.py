@@ -166,8 +166,8 @@ def dev4_planar_la1_d1_d8():
 
 dev4s_parametric = {
     "planar": {
-        "alpha1_d_0_d_7": dev4_planar_alpha1_d1_d8(),
-        "la_0_d_0_d_7": dev4_planar_la1_d1_d8(),
+        "alpha1_d1_d8": dev4_planar_alpha1_d1_d8(),
+        "la1_d1_d8": dev4_planar_la1_d1_d8(),
     },
     "cubic": {"d1": dev4_cubic_d1()},
     "transv_isotropic": {
@@ -176,6 +176,6 @@ dev4s_parametric = {
         "rho3": dev4_transv_z_by_rho3(),
     },
     "monoclinic": {
-        "a_b_c_m_n_in_z_direction": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
+        "d1_d2_d3_d4_d5": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
     },
 }
