@@ -169,6 +169,7 @@ dev4s_parametric = {
         "alpha1_d_0_d_7": dev4_planar_alpha1_d1_d8(),
         "la_0_d_0_d_7": dev4_planar_la1_d1_d8(),
     },
+    "cubic": {"d1": dev4_cubic_d1()},
     "transv_isotropic": {
         "rho1": dev4_transv_x_by_rho1(),
         "rho2": dev4_transv_y_by_rho2(),
