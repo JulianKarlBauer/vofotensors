@@ -19,6 +19,7 @@ from vofotensors.abc import (
     d9,
 )
 from vofotensors import substitutions
+import vofotensors
 
 ##################
 # N4
@@ -100,6 +101,38 @@ def dev4_ortho_by_rho1_rho2_rho3():
     return dev4_transv_x_by_rho1() + dev4_transv_y_by_rho2() + dev4_transv_z_by_rho3()
 
 
+def dev4_tetragonal_by_d1_d3():
+    return vofotensors.utils.copy_upper_triangle(
+        np.array(
+            [
+                [-sp.S(2) * d1, d1, d1, z, z, z],
+                [z, -(d1 + d3), d3, z, z, z],
+                [z, z, -(d1 + d3), z, z, z],
+                [z, z, z, sp.S(2) * d3, z, z],
+                [z, z, z, z, sp.S(2) * d1, z],
+                [z, z, z, z, z, sp.S(2) * d1],
+            ],
+            dtype=object,
+        )
+    )
+
+
+def dev4_trigonal_by_d3_d9():
+    return vofotensors.utils.copy_upper_triangle(
+        np.array(
+            [
+                [sp.S(8) * d3, -sp.S(4) * d3, -sp.S(4) * d3, z, z, z],
+                [z, sp.S(3) * d3, d3, z, z, sqrt_two * d9],
+                [z, z, sp.S(3) * d3, z, z, -sqrt_two * d9],
+                [z, z, z, sp.S(2) * d3, -sp.S(2) * d9, z],
+                [z, z, z, z, -sp.S(8) * d3, z],
+                [z, z, z, z, z, -sp.S(8) * d3],
+            ],
+            dtype=object,
+        )
+    )
+
+
 def dev4_ortho_by_d1_d2_d3():
     return np.array(
         [
@@ -128,18 +161,11 @@ def dev4_monoclinic_by_d1_d2_d3_d4_d5():
     )
 
 
-def copy_upper_triangle(matrix):
-    r"""Copy upper triangle to lower triangle, i.e. make symmetric"""
-    index_lower_triangle = np.tril_indices(6, -1)
-    matrix[index_lower_triangle] = matrix.T[index_lower_triangle]
-    return matrix
-
-
 def dev4_triclinic_by_d():
     comp_03 = -sqrt_two * (d4 + d5)
     comp_14 = -sqrt_two * (d6 + d7)
     comp_25 = -sqrt_two * (d8 + d9)
-    return copy_upper_triangle(
+    return vofotensors.utils.copy_upper_triangle(
         np.array(
             [
                 [-(d1 + d2), d1, d2, comp_03, sqrt_two * d6, sqrt_two * d8],
@@ -172,15 +198,18 @@ def dev4_planar_la1_d1_d8():
 
 dev4s_parametric = {
     "planar": {
-        "alpha1_d_0_d_7": dev4_planar_alpha1_d1_d8(),
-        "la_0_d_0_d_7": dev4_planar_la1_d1_d8(),
+        "alpha1_d1_d8": dev4_planar_alpha1_d1_d8(),
+        "la1_d1_d8": dev4_planar_la1_d1_d8(),
     },
+    "cubic": {"d1": dev4_cubic_d1()},
     "transv_isotropic": {
         "rho1": dev4_transv_x_by_rho1(),
         "rho2": dev4_transv_y_by_rho2(),
         "rho3": dev4_transv_z_by_rho3(),
     },
+    "tetragonal": {"d1_d3": dev4_tetragonal_by_d1_d3()},
+    "trigonal": {"d3_d9": dev4_trigonal_by_d3_d9()},
     "monoclinic": {
-        "a_b_c_m_n_in_z_direction": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
+        "d1_d2_d3_d4_d5": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
     },
 }
