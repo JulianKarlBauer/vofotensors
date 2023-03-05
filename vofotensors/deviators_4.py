@@ -101,6 +101,38 @@ def dev4_ortho_by_rho1_rho2_rho3():
     return dev4_transv_x_by_rho1() + dev4_transv_y_by_rho2() + dev4_transv_z_by_rho3()
 
 
+def dev4_tetragonal_by_d1_d3():
+    return vofotensors.utils.copy_upper_triangle(
+        np.array(
+            [
+                [-sp.S(2) * d1, d1, d1, z, z, z],
+                [z, -(d1 + d3), d3, z, z, z],
+                [z, z, -(d1 + d3), z, z, z],
+                [z, z, z, sp.S(2) * d3, z, z],
+                [z, z, z, z, sp.S(2) * d1, z],
+                [z, z, z, z, z, sp.S(2) * d1],
+            ],
+            dtype=object,
+        )
+    )
+
+
+def dev4_trigonal_by_d3_d9():
+    return vofotensors.utils.copy_upper_triangle(
+        np.array(
+            [
+                [sp.S(8) * d3, -sp.S(4) * d3, -sp.S(4) * d3, z, z, z],
+                [z, sp.S(3) * d3, d3, z, z, sqrt_two * d9],
+                [z, z, sp.S(3) * d3, z, z, -sqrt_two * d9],
+                [z, z, z, sp.S(2) * d3, -sp.S(2) * d9, z],
+                [z, z, z, z, -sp.S(8) * d3, z],
+                [z, z, z, z, z, -sp.S(8) * d3],
+            ],
+            dtype=object,
+        )
+    )
+
+
 def dev4_ortho_by_d1_d2_d3():
     return np.array(
         [
@@ -175,6 +207,8 @@ dev4s_parametric = {
         "rho2": dev4_transv_y_by_rho2(),
         "rho3": dev4_transv_z_by_rho3(),
     },
+    "tetragonal": {"d1_d3": dev4_tetragonal_by_d1_d3()},
+    "trigonal": {"d3_d9": dev4_trigonal_by_d3_d9()},
     "monoclinic": {
         "d1_d2_d3_d4_d5": dev4_monoclinic_by_d1_d2_d3_d4_d5(),
     },

@@ -29,8 +29,8 @@ N4s_pairs = {
         "d1": {
             "D2": dev2s.dev2_cubic(),
             "D4": dev4s.dev4_cubic_d1(),
-            }
-        },
+        }
+    },
     "planar": {
         "alpha1_d1_d8": {
             "D2": dev2s.dev2_planar_by_alpha1(),
@@ -53,6 +53,18 @@ N4s_pairs = {
         "alpha3_rho3": {
             "D2": dev2s.dev2_by_alpha3(),
             "D4": dev4s.dev4_transv_z_by_rho3(),
+        },
+    },
+    "tetragonal": {
+        "alpha1_d1_d3": {
+            "D2": dev2s.dev2_by_alpha1(),
+            "D4": dev4s.dev4_tetragonal_by_d1_d3(),
+        },
+    },
+    "trigonal": {
+        "alpha1_d3_d9": {
+            "D2": dev2s.dev2_by_alpha1(),
+            "D4": dev4s.dev4_trigonal_by_d3_d9(),
         },
     },
     "orthotropic": {
