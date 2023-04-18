@@ -92,6 +92,10 @@ N4s_pairs = {
             "D2": dev2s.dev2_by_la1_la2(),
             "D4": dev4s.dev4_triclinic_by_d(),
         },
+        "alpha1_alpha3_d1_d2_d3_d4_d5_d6_d7_d8_d9": {
+            "D2": dev2s.dev2_by_alpha1_alpha3(),
+            "D4": dev4s.dev4_triclinic_by_d(),
+        },
     },
 }
 
